@@ -7,4 +7,15 @@ RSpec.describe Hash do
         expect(subject.length).to eq(2)
         expect(bob.length).to eq(2)
     end
+
+    it "is isolated between tests" do
+        expect(bob.length).to eq(2)
+    end
+
+    describe 'nested example' do
+        it 'has 2 key value pairs' do
+            expect(bob.length).to eq(2)
+        end
+    end
+
 end
